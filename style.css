@@ -7,13 +7,6 @@ div {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  /* width: 50vw;
-  height: 50vh; */
   background: red;
   transition: 2s ease-in-out;
-}
-.minis {
-  width: 25vw;
-  height: 25vw;
-  background: blue;
 }
