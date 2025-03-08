@@ -10,5 +10,4 @@ div.addEventListener("click", (e) => {
   if (rotat[1] === 1) {
     reset((rotat[0] += 90), (rotat[1] = -1));
   } else reset((rotat[0] += 90), (rotat[1] = 1));
-  // rotat[1]=-1;
 });
