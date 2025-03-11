@@ -1,0 +1,17 @@
+section {
+  background: red;
+  height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 5% 0;
+}
+
+div {
+  background: green;
+  border: 2px solid black;
+  height: 10vh;
+  width: 10%;
+  margin: 0 10px;
+  cursor: zoom-in;
+}
