@@ -1,5 +1,6 @@
 const divs = document.querySelectorAll(".zoomDiv > div");
-const crea = document.querySelector(".creatDiv");
+
+// Zoom boite
 
 divs.forEach((div) => {
   const removeClass = () => {
@@ -23,16 +24,26 @@ divs.forEach((div) => {
   });
 });
 
+// creation boite
+
+const crea = document.querySelector(".creatDiv");
+let imgs = [];
 let ind = 0;
+
+console.log();
+
 const createDiv = () => {
-  console.log(ind);
-  if (ind < 10) {
+  if (ind < 8) {
     crea.innerHTML += `<div></div>`;
     ind += 1;
-    console.log(ind);
+    const div = document.querySelectorAll(".creatDiv div");
+    div[
+      ind - 1
+    ].style.background = `url(./assets/img/Image_${ind}_accueil.jpg) center/cover`;
+
     setTimeout(() => {
       createDiv();
-    }, 1000);
+    }, 10);
   } else {
     ind = 0;
     console.log("stop");

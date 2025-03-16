@@ -8,6 +8,9 @@ section {
 .zoomDiv {
   background: red;
 }
+.zoomDiv div {
+  cursor: zoom-in;
+}
 .creatDiv {
   background: blue;
 }
@@ -17,6 +20,7 @@ div {
   height: 80px;
   width: 80px;
   margin: 10px;
-  cursor: zoom-in;
   transition: 0.3s ease-in-out;
 }
+/* .creatDiv div {
+} */
