@@ -27,26 +27,31 @@ divs.forEach((div) => {
 // creation boite
 
 const crea = document.querySelector(".creatDiv");
-let imgs = [];
-let ind = 0;
+// let ind = 0;
 
-console.log();
+for (d = 0; d < 8; d++) {
+  crea.innerHTML += `<div></div>`;
+  const div = document.querySelectorAll(".creatDiv div");
+  div[d].style.background = `url(./assets/img/Image_${
+    d + 1
+  }_accueil.jpg) center/cover`;
+}
 
-const createDiv = () => {
-  if (ind < 8) {
-    crea.innerHTML += `<div></div>`;
-    ind += 1;
-    const div = document.querySelectorAll(".creatDiv div");
-    div[
-      ind - 1
-    ].style.background = `url(./assets/img/Image_${ind}_accueil.jpg) center/cover`;
+// const createDiv = () => {
+//   if (ind < 8) {
+//     crea.innerHTML += `<div></div>`;
+//     ind += 1;
+//     const div = document.querySelectorAll(".creatDiv div");
+//     div[
+//       ind - 1
+//     ].style.background = `url(./assets/img/Image_${ind}_accueil.jpg) center/cover`;
 
-    setTimeout(() => {
-      createDiv();
-    }, 10);
-  } else {
-    ind = 0;
-    console.log("stop");
-  }
-};
-createDiv();
+//     setTimeout(() => {
+//       createDiv();
+//     }, 10);
+//   } else {
+//     ind = 0;
+//     console.log("stop");
+//   }
+// };
+// createDiv();
