@@ -27,31 +27,33 @@ divs.forEach((div) => {
 // creation boite
 
 const crea = document.querySelector(".creatDiv");
-// let ind = 0;
+const creaButton = document.querySelector("#creatButton");
+let div;
 
 for (d = 0; d < 8; d++) {
   crea.innerHTML += `<div></div>`;
-  const div = document.querySelectorAll(".creatDiv div");
-  div[d].style.background = `url(./assets/img/Image_${
-    d + 1
-  }_accueil.jpg) center/cover`;
+  div = document.querySelectorAll(".creatDiv div");
+  if (d == 3) {
+    div[d].style.background = `linear-gradient(90deg, #ffffff00, #0a00ffe8),
+    url(./assets/img/Image_${d + 1}_accueil.jpg) center/cover
+    `;
+  } else {
+    div[d].style.background = `url(./assets/img/Image_${
+      d + 1
+    }_accueil.jpg) center/cover`;
+  }
 }
 
-// const createDiv = () => {
-//   if (ind < 8) {
-//     crea.innerHTML += `<div></div>`;
-//     ind += 1;
-//     const div = document.querySelectorAll(".creatDiv div");
-//     div[
-//       ind - 1
-//     ].style.background = `url(./assets/img/Image_${ind}_accueil.jpg) center/cover`;
-
-//     setTimeout(() => {
-//       createDiv();
-//     }, 10);
-//   } else {
-//     ind = 0;
-//     console.log("stop");
-//   }
-// };
-// createDiv();
+creatButton.addEventListener("click", () => {
+  creatButton.style.display = "none";
+  for (d = 0; d < div.length; d++) {
+    if (d == 3) {
+      div[d].style.background = `url(./assets/img/Image_${
+        d + 1
+      }_accueil.jpg) center/cover`;
+      div[d].style.display = "block";
+    } else {
+      div[d].style.display = "block";
+    }
+  }
+});

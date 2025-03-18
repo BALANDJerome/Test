@@ -22,5 +22,30 @@ div {
   margin: 10px;
   transition: 0.3s ease-in-out;
 }
-/* .creatDiv div {
-} */
+#creatButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(180px);
+  height: 80px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 0 7px 7px 0;
+  background-color: #ffffffb5;
+  transition: 0.15s ease-in-out;
+}
+#creatButton:hover {
+  transform: scale(1.1) translate(170px);
+}
+.creatDiv div {
+  border: none;
+}
+.creatDiv div:nth-child(6),
+.creatDiv div:nth-child(7),
+.creatDiv div:nth-child(8),
+.creatDiv div:nth-child(9) {
+  display: none;
+}
+.extend {
+  background: yellowgreen;
+}
