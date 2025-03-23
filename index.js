@@ -57,3 +57,11 @@ creatButton.addEventListener("click", () => {
     }
   }
 });
+
+// Extend
+
+const ext = document.querySelector(".extend div");
+
+ext.addEventListener("click", () => {
+  console.log("ok");
+});
