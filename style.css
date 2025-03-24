@@ -48,4 +48,29 @@ div {
 }
 .extend {
   background: yellowgreen;
+  position: relative;
+}
+#pic1 {
+  background: red;
+}
+#pic2 {
+  background: purple;
+}
+#pic3 {
+  background: whitesmoke;
+}
+#pic4 {
+  background: yellow;
+}
+.carou {
+  height: 280px;
+  width: 160px;
+  display: none;
+}
+.view {
+  display: block;
+}
+.extend span {
+  position: absolute;
+  bottom: 25px;
 }
