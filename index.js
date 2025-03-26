@@ -62,20 +62,33 @@ creatButton.addEventListener("click", () => {
 
 const pic = document.querySelectorAll(".carou");
 const inpPics = document.getElementsByName("pics");
-let namePic;
+let indTest = 0;
+let interval;
 
-const changePic = () => {
+const changePic = (namePic) => {
   pic.forEach((divs) => {
     divs.classList.remove("view");
-    if (divs.id == namePic) {
-      divs.classList.add("view");
-    }
+    if (divs.id == namePic) divs.classList.add("view");
   });
 };
 
 inpPics.forEach((radio) => {
   radio.addEventListener("click", (e) => {
-    namePic = e.target.attributes[2].value;
-    changePic();
+    changePic(radio.id.slice(3));
+    clearInterval(interval);
   });
 });
+
+const picsChecked = () => {
+  inpPics.forEach((check) => {
+    check.checked = false;
+  });
+  indTest++;
+  if (indTest >= inpPics.length) indTest = 0;
+  inpPics[indTest].checked = true;
+  changePic(inpPics[indTest].id.slice(3));
+};
+
+interval = setInterval(() => {
+  picsChecked();
+}, 3000);
