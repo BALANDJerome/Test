@@ -87,3 +87,7 @@ span input {
 span input:checked {
   background-color: rgb(0, 0, 0);
 }
+
+.countdown {
+  background: yellow;
+}
